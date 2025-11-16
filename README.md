@@ -1,15 +1,25 @@
 # ChatGPT-style UI
 
-A frontend-only React application mimicking a ChatGPT-style interface, built with Vite, React, and Tailwind CSS.
+A full-stack ChatGPT-style interface built with Vite, React, Tailwind CSS, and a Node.js + Express backend using static JSON data (no database).
 
 ## Features
 
--   **Neutral Theme**: Light (soft whites) and Dark (deep grays) modes.
--   **Theme Persistence**: Saves user's theme preference in `localStorage`.
--   **Responsive Design**: Collapsible sidebar on desktop, drawer on mobile.
--   **Client-Side Routing**: Uses React Router for session-based URLs (`/session/:sessionId`).
--   **Mock API Layer**: Includes stub functions in `src/api.js` for easy backend integration.
--   **Modern UI/UX**: Features subtle glassmorphism, loading states, and accessibility enhancements.
+-   **New Chat Flow**: Create sessions dynamically with backend-generated IDs.
+-   **Session-Based Routing**: Each chat is loaded from  `/session/:sessionId`.
+-   **Session History**: Sidebar lists all sessions and loads chat history on click.
+-   **Structured Responses**: Displays both description + tabular data in chat.
+-   **Feedback System**: Like 👍 / Dislike 👎 , Toggle, undo, update counts correctly , Per-user voting (clientId stored in localStorage)
+-   **Theme System**: Light / Dark mode
+                      -   Saves preference in localStorage
+-   **Modern UI**:  Glassmorphism , Smooth animations, Loading states, Accessibility (Enter-to-send, ARIA labels)
+-   **Responsive Design**: Sidebar collapses on mobile, Drawer UI for small screens
+
+  
+
+
+
+
+
 
 ## Getting Started
 
@@ -18,6 +28,43 @@ A frontend-only React application mimicking a ChatGPT-style interface, built wit
 -   Node.js (v18 or higher)
 -   npm
 
+### Project Structure 
+
+  ```bash
+chat-app/
+│
+├── backend/
+│   ├── server.js
+│   ├── mockData.js
+│   ├── data/
+│   │   ├── sessions.json
+│   │   └── history.json
+│   └── package.json
+│
+├── src/
+│   ├── api.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   ├── pages/
+│   │   ├── Landing.jsx
+│   │   └── ChatPage.jsx
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── ChatHeader.jsx
+│   │   ├── ChatInput.jsx
+│   │   ├── MessageItem.jsx
+│   │   ├── MessageList.jsx
+│   │   ├── TableView.jsx
+│   │   ├── FeedbackButtons.jsx
+│   │   └── ThemeToggle.jsx
+│   └── ...
+│
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── .env
+ ```
 ### Installation & Running
 
 1.  **Install dependencies:**
@@ -32,9 +79,36 @@ A frontend-only React application mimicking a ChatGPT-style interface, built wit
 
 The application will be available at `http://localhost:5173` (or the next available port).
 
-## Backend Integration
+## Backend Setup 
 
-This project is frontend-only and uses a mock API to simulate backend responses. To connect it to a real backend, follow these steps:
+1. **Move into backend folder:**
+
+``` 
+cd backend
+```
+
+2. **Install backend dependencies:**
+
+```
+npm install
+```
+3. **Start backend server:**
+
+```
+   npm run dev
+  
+```
+**Backend API runs on:**
+
+```
+http://localhost:5000
+```
+
+
+
+## Backend Integration ( How can we Setup )
+
+To connect it to a real backend, follow these steps:
 
 1.  **Create an environment file:**
 
