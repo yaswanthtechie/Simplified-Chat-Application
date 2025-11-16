@@ -1,0 +1,467 @@
+[
+  {
+    "id": "c8c93a2a-6189-45b1-88c2-b482262c7bc8",
+    "title": "hello",
+    "createdAt": "2025-11-16T10:23:41.303Z",
+    "history": [
+      {
+        "id": "12ad372b-626a-4daa-b8f5-bb9766cf9252",
+        "question": "hello",
+        "answer": {
+          "description": "Mock answer for: \"hello\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                35,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "15.00",
+                "avg"
+              ],
+              [
+                "Count",
+                6,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          },
+          "votes": {}
+        },
+        "timestamp": "2025-11-16T10:23:41.304Z"
+      }
+    ]
+  },
+  {
+    "id": "10f52175-2565-4ab7-978a-a4acbe405392",
+    "title": "hi",
+    "createdAt": "2025-11-16T10:21:02.390Z",
+    "history": [
+      {
+        "id": "7676bc0c-f74f-407e-93af-9957c6acdd51",
+        "question": "hi",
+        "answer": {
+          "description": "Mock answer for: \"hi\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                14,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "6.00",
+                "avg"
+              ],
+              [
+                "Count",
+                3,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          },
+          "votes": {}
+        },
+        "timestamp": "2025-11-16T10:21:02.390Z"
+      }
+    ]
+  },
+  {
+    "id": "44d52660-67bb-4d32-8cc9-3d9c9513fb0e",
+    "title": "Create a budget that fits my...",
+    "createdAt": "2025-11-16T10:15:55.787Z",
+    "history": [
+      {
+        "id": "f2f5d000-8e54-4848-aa34-f30d93ccc6d9",
+        "question": "Create a budget that fits my lifestyle",
+        "answer": {
+          "description": "Mock answer for: \"Create a budget that fits my lifestyle\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                266,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "14.00",
+                "avg"
+              ],
+              [
+                "Count",
+                9,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          },
+          "votes": {}
+        },
+        "timestamp": "2025-11-16T10:15:55.788Z"
+      }
+    ]
+  },
+  {
+    "id": "8f695b49-f48d-4904-adb1-7d63cf77cd82",
+    "title": "Create a budget that fits my...",
+    "createdAt": "2025-11-16T10:10:32.802Z",
+    "history": [
+      {
+        "id": "14749e09-257f-45f6-aefb-9ee38fa5aaef",
+        "question": "Create a budget that fits my lifestyle",
+        "answer": {
+          "description": "Mock answer for: \"Create a budget that fits my lifestyle\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                266,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "14.00",
+                "avg"
+              ],
+              [
+                "Count",
+                9,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 1,
+            "dislike": 0
+          },
+          "votes": {
+            "client-1763287768677-pfriwgkz4": "like"
+          }
+        },
+        "timestamp": "2025-11-16T10:10:32.803Z"
+      }
+    ]
+  },
+  {
+    "id": "2a56a239-7d2f-4e0c-bc9f-6d26dc2f409c",
+    "title": "hi",
+    "createdAt": "2025-11-16T09:49:49.606Z",
+    "history": [
+      {
+        "id": "99cb0469-7bc0-456c-aa0e-c70a5b2e67b7",
+        "question": "hi",
+        "answer": {
+          "description": "Mock answer for: \"hi\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                14,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "6.00",
+                "avg"
+              ],
+              [
+                "Count",
+                3,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          }
+        },
+        "timestamp": "2025-11-16T09:49:49.607Z"
+      }
+    ]
+  },
+  {
+    "id": "678d0cbd-2c99-4742-bf0d-cd9e607d12fe",
+    "title": "what is ai",
+    "createdAt": "2025-11-16T09:43:39.902Z",
+    "history": [
+      {
+        "id": "268fd7a3-9713-41ba-a16e-32ee3a008868",
+        "question": "what is ai",
+        "answer": {
+          "description": "Mock answer for: \"what is ai\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                70,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "30.00",
+                "avg"
+              ],
+              [
+                "Count",
+                1,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          }
+        },
+        "timestamp": "2025-11-16T09:43:39.902Z"
+      }
+    ]
+  },
+  {
+    "id": "cdbfb15e-3825-43e3-8680-9eef21f62af2",
+    "title": "Explain what data analytics is in...",
+    "createdAt": "2025-11-16T09:43:29.221Z",
+    "history": [
+      {
+        "id": "9f43bdcc-ab2c-4ed0-ac98-06259426640b",
+        "question": "Explain what data analytics is in simple terms",
+        "answer": {
+          "description": "Mock answer for: \"Explain what data analytics is in simple terms\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                322,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "38.00",
+                "avg"
+              ],
+              [
+                "Count",
+                7,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 3,
+            "dislike": 3
+          }
+        },
+        "timestamp": "2025-11-16T09:43:29.221Z"
+      },
+      {
+        "id": "a80bcb6d-d231-422d-9d8f-ff240311f733",
+        "question": "hello",
+        "answer": {
+          "description": "Mock answer for: \"hello\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                35,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "15.00",
+                "avg"
+              ],
+              [
+                "Count",
+                6,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 2,
+            "dislike": 1
+          }
+        },
+        "timestamp": "2025-11-16T09:51:18.219Z"
+      }
+    ]
+  },
+  {
+    "id": "28bcd328-655f-49cd-82f3-b32fab6df103",
+    "title": "Create a budget that fits my...",
+    "createdAt": "2025-11-16T09:43:21.925Z",
+    "history": [
+      {
+        "id": "caa57e4f-b112-48fa-a910-7ea9e561e3e3",
+        "question": "Create a budget that fits my lifestyle",
+        "answer": {
+          "description": "Mock answer for: \"Create a budget that fits my lifestyle\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                266,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "14.00",
+                "avg"
+              ],
+              [
+                "Count",
+                9,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          }
+        },
+        "timestamp": "2025-11-16T09:43:21.925Z"
+      }
+    ]
+  },
+  {
+    "id": "1346dad4-5493-4a83-87c1-c690a151000f",
+    "title": "Hello from PowerShell",
+    "createdAt": "2025-11-16T09:05:59.226Z",
+    "history": [
+      {
+        "id": "381fc2d0-fe75-472b-ab6e-9db08ae810be",
+        "question": "Hello from PowerShell",
+        "answer": {
+          "description": "Mock answer for: \"Hello from PowerShell\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                147,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "63.00",
+                "avg"
+              ],
+              [
+                "Count",
+                2,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          }
+        },
+        "timestamp": "2025-11-16T09:05:59.226Z"
+      },
+      {
+        "id": "a51403de-ae4e-4139-a2c5-b8274958c529",
+        "question": "Show me a small table",
+        "answer": {
+          "description": "Mock answer for: \"Show me a small table\".",
+          "table": {
+            "columns": [
+              "Metric",
+              "Value",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Total",
+                147,
+                "auto-estimate"
+              ],
+              [
+                "Average",
+                "63.00",
+                "avg"
+              ],
+              [
+                "Count",
+                2,
+                "count"
+              ]
+            ]
+          },
+          "feedback": {
+            "like": 0,
+            "dislike": 0
+          }
+        },
+        "timestamp": "2025-11-16T09:18:23.755Z"
+      }
+    ]
+  }
+]

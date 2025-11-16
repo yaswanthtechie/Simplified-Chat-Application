@@ -4,6 +4,7 @@ import { getHistory, askQuestion } from '../api';
 import ChatHeader from '../components/ChatHeader';
 import MessageList from '../components/MessageList';
 import ChatInput from '../components/ChatInput';
+import Plasma from '../components/Plasma';
 import { Loader2 } from 'lucide-react';
 
 const ChatPage = () => {
@@ -14,6 +15,25 @@ const ChatPage = () => {
   const [history, setHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isResponding, setIsResponding] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detect dark mode
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
+    
+    checkDarkMode();
+    
+    // Watch for theme changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+    
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
@@ -74,15 +94,31 @@ const ChatPage = () => {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full relative">
       <ChatHeader session={session} />
-      <div className="flex-1 overflow-y-auto">
-        <MessageList history={history} sessionId={sessionId} setHistory={setHistory} />
-        {isResponding && (
-            <div className="flex justify-center py-4">
-                <Loader2 className="h-6 w-6 animate-spin text-light-accent dark:text-dark-accent" />
+      <div className="flex-1 overflow-y-auto relative">
+        {!isLoading && (
+          <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+              <Plasma 
+                color={isDarkMode ? "#8B5CF6" : "#E9D5FF"}
+                speed={0.6}
+                direction="forward"
+                scale={1.1}
+                opacity={isDarkMode ? 0.8 : 0.15}
+                mouseInteractive={true}
+              />
             </div>
+          </div>
         )}
+        <div className="relative z-10">
+          <MessageList history={history} sessionId={sessionId} setHistory={setHistory} />
+          {isResponding && (
+              <div className="flex justify-center py-4">
+                  <Loader2 className="h-6 w-6 animate-spin text-light-accent dark:text-dark-accent" />
+              </div>
+          )}
+        </div>
       </div>
       <ChatInput onSendMessage={handleSendMessage} isLoading={isResponding} />
     </div>

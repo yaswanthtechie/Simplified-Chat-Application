@@ -1,15 +1,34 @@
 import TableView from './TableView';
 import FeedbackButtons from './FeedbackButtons';
 import { User, Bot } from 'lucide-react';
+import { sendFeedback, getClientId } from '../api';
 
 const MessageItem = ({ message, entryId, sessionId, setHistory }) => {
   const isBot = message.author === 'bot';
+  const clientId = getClientId();
+  
+  // Get userVote from message.votes (which comes from entry.answer.votes)
+  const userVote = message.votes?.[clientId] || null;
 
   const BotMessageWrapper = ({ children }) => (
     <div className="p-4 rounded-xl bg-light-surface dark:bg-dark-surface">
       {children}
     </div>
   );
+
+  const handleFeedback = async (action) => {
+    const response = await sendFeedback(sessionId, entryId, action);
+    if (response.success) {
+      // Update the entry in history with the new entry from the API response
+      setHistory(prevHistory => 
+        prevHistory.map(entry => 
+          entry.id === entryId 
+            ? response.entry 
+            : entry
+        )
+      );
+    }
+  };
 
   const content = (
     <>
@@ -21,7 +40,14 @@ const MessageItem = ({ message, entryId, sessionId, setHistory }) => {
           <TableView table={message.table} />
         </div>
       )}
-      {isBot && <FeedbackButtons entryId={entryId} feedback={message.feedback} sessionId={sessionId} setHistory={setHistory} />}
+      {isBot && (
+        <FeedbackButtons 
+          likeCount={message.feedback?.like || 0}
+          dislikeCount={message.feedback?.dislike || 0}
+          userVote={userVote}
+          onFeedback={handleFeedback}
+        />
+      )}
     </>
   );
 
